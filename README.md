@@ -10,7 +10,7 @@ architecture to explore Chaos Engineering experiments using the
 
 The architecture of our application is as follows:
 
-![Architecture](https://github.com/chaosiq/demos/superpower/raw/master/data/arch.png "Architecture")
+![Architecture](https://github.com/chaosiq/superpower-demo/raw/master/data/arch.png "Architecture")
 
 As you can see, it's really simple. Users talk to the superpower service which
 talks to the powersource service.
@@ -68,9 +68,9 @@ Be aware, this will take a few minutes to complete so go grab a coffee :)
 
 You can deploy and run the application using one of the followings:
 
-* [Local](../docs/local.md): Run natively on your local machine
-* [Kubernetes (minikube)](../docs/minikube.md): Run in Kubernetes in a VM on your local machine
-* [Kubernetes (microk8s)](../docs/microk8s.md): Run in Kubernetes natively on your local machine (Linux only)
+* [Local](https://raw.githubusercontent.com/chaosiq/superpower-demo/master/docs/local.md): Run natively on your local machine
+* [Kubernetes (minikube)](https://raw.githubusercontent.com/chaosiq/superpower-demo/master/docs/minikube.md): Run in Kubernetes in a VM on your local machine
+* [Kubernetes (microk8s)](https://raw.githubusercontent.com/chaosiq/superpower-demo/master/docs/microk8s.md): Run in Kubernetes natively on your local machine (Linux only)
 
 
 ## Access the application
