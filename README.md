@@ -115,7 +115,7 @@ $ chaos run --journal-path experiments/journal-1.json experiments/local/lose-hal
 
 [See it](https://asciinema.org/a/209775) in action.
 
-### Experiment 2: Lose the entire PowerSource service fleet
+### Experiment 2: Lose the entire PowerSource service fleet
 
 What if 100% of your fleet of powersource service instances were going down?
 Would this impact the promises you made to your users?
@@ -130,7 +130,7 @@ $ chaos run --journal-path experiments/journal-2.json experiments/local/lose-all
 
 [See it](https://asciinema.org/a/209776) in action.
 
-### Experiment 3: Superpower latency should not be impacted by high-load
+### Experiment 3: Superpower latency should not be impacted by high-load
 
 How does our service perform under heavy load?
 Would this impact the promises you made to your users?
