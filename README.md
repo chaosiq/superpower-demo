@@ -41,7 +41,7 @@ simple architecture copes with degraded conditions.
 The data used by this demo is under copyright by [Marvel][]. For this reason,
 you need to collect the data yourself prior to running this demo.
 
-To achieve that, you must first create an [API key][] and store it into
+To achieve that, you must first create an [API key][apikey] and store it into
 the following variables:
 
 ```
