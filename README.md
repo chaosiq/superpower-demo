@@ -155,5 +155,5 @@ $ docker run \
     --user `id -u` \
     -v `pwd`/experiments:/tmp/result \
     -it \
-    chaostoolkit/reporting:0.10.0 -- report --export-format=pdf journal-*.json report.pdf
+    chaostoolkit/reporting:0.11.0 -- report --export-format=pdf journal-*.json report.pdf
 ```
