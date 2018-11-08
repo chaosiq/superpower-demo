@@ -100,7 +100,7 @@ You should also install [vegeta][].
 
 [vegeta]: https://github.com/tsenart/vegeta
 
-### Experiment 1: Lose Half of the PowerSource service fleet
+### Experiment 1: Lose Half of the PowerSource service fleet
 
 What if 50% of your fleet of powersource service instances were going down?
 Would this impact the promises you made to your users?
