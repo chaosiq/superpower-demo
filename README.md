@@ -68,9 +68,9 @@ Be aware, this will take a few minutes to complete so go grab a coffee :)
 
 You can deploy and run the application using one of the followings:
 
-* [Local](https://raw.githubusercontent.com/chaosiq/superpower-demo/master/docs/local.md): Run natively on your local machine
-* [Kubernetes (minikube)](https://raw.githubusercontent.com/chaosiq/superpower-demo/master/docs/minikube.md): Run in Kubernetes in a VM on your local machine
-* [Kubernetes (microk8s)](https://raw.githubusercontent.com/chaosiq/superpower-demo/master/docs/microk8s.md): Run in Kubernetes natively on your local machine (Linux only)
+* [Local](https://github.com/chaosiq/superpower-demo/blob/master/docs/local.md): Run natively on your local machine
+* [Kubernetes (minikube)](https://github.com/chaosiq/superpower-demo/blob/master/docs/minikube.md): Run in Kubernetes in a VM on your local machine
+* [Kubernetes (microk8s)](https://github.com/chaosiq/superpower-demo/blob/master/docs/microk8s.md): Run in Kubernetes natively on your local machine (Linux only)
 
 
 ## Access the application

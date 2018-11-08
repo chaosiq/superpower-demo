@@ -26,7 +26,7 @@ Run the following:
 $ ./scripts/run-local.sh
 ```
 
-### Terminate the application
+### Terminate the application
 
 Run the following:
 
