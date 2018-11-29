@@ -13,8 +13,7 @@ session = None
 
 def ask_for_superpower(service_url: str, timeout: int = 3,
                        configuration: Configuration = None, 
-                       secrets: Secrets = None,
-                       controls: 'ControlContext' = None) -> Dict[str, Any]:
+                       secrets: Secrets = None) -> Dict[str, Any]:
     """
     Fetch a superpower
     """
@@ -25,15 +24,6 @@ def ask_for_superpower(service_url: str, timeout: int = 3,
     headers = {
         'Accept': 'application/json'
     }
-
-    # part of an upcoming chaostoolkit release
-    if controls:
-        tracing_span = controls.get("tracing")
-        if tracing_span:
-            tracing_span.set_tag('http.method', 'GET')
-            tracing_span.set_tag('http.url', service_url)
-            tracing_span.set_tag('span.kind', 'client')
-            tracing_span.tracer.inject(tracing_span, 'http_headers', headers)
 
     info = {}
     try:
@@ -47,11 +37,6 @@ def ask_for_superpower(service_url: str, timeout: int = 3,
         info = r.json()
         fetched_superpowers.append(info)
 
-    if controls:
-        tracing_span = controls.get("tracing")
-        if tracing_span:
-            tracing_span.set_tag('http.status_code', r.status_code)
-
     return {
         "status": r.status_code,
         "headers": dict(**r.headers),
@@ -60,8 +45,7 @@ def ask_for_superpower(service_url: str, timeout: int = 3,
 
 
 def has_kept_superpower(configuration: Configuration = None,
-                        secrets: Secrets = None,
-                        controls: 'ControlContext' = None) -> bool:
+                        secrets: Secrets = None) -> bool:
     """
     Check two calls to `ask_for_superpower` have resulted in the same returned
     superpower.
