@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
-    "title": "Users should keep their superpower when powersource loses 100% of its fleet",
-    "description": "The powersource service is called by the superpower frontend to fetch character's info. What happens when all its instances go down?",
+    "title": "Users should keep their superpower when powersource loses 60% of its fleet",
+    "description": "The powersource service is called by the superpower frontend to fetch character's info. What happens when half of its instances go down?",
     "tags": [
         "kubernetes", "superpower", "powersource"
     ],
@@ -17,9 +17,6 @@
         "safety": "medium",
         "security": "none",
         "performability": "none"
-    },
-    "controls": {
-        "tracing": {}
     },
     "steady-state-hypothesis": {
         "title": "Super powers must not change",
@@ -38,9 +35,6 @@
                     "arguments": {
                         "service_url": "${service_url}"
                     }
-                },
-                "controls": {
-                    "tracing": {}
                 }
             },
             {
@@ -51,9 +45,6 @@
                     "type": "python",
                     "module": "chaospower.probes",
                     "func": "has_kept_superpower"
-                },
-                "controls": {   
-                    "tracing": {}
                 }
             }
         ]
@@ -74,9 +65,6 @@
             },
             "pauses": {
                 "after": 5
-            },
-            "controls": {
-                "tracing": {}
             }
         },
         {
@@ -86,9 +74,6 @@
                 "type": "http",
                 "timeout": [5, 2],
                 "url": "${service_url}"
-            },
-            "controls": {
-                "tracing": {}
             }
         },
         {
@@ -104,9 +89,6 @@
                     "ns": "mucon",
                     "container_name": "superpower-app"
                 }
-            },
-            "controls": {
-                "tracing": {}
             }
         }
     ]

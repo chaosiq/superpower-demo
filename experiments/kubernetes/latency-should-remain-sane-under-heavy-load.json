@@ -18,14 +18,8 @@
         "security": "none",
         "performability": "high"
     },
-    "controls": {
-        "tracing": {}
-    },
     "steady-state-hypothesis": {
         "title": "Super powers must arrive fast",
-        "controls": {
-            "tracing": {}
-        },
         "probes": [
             {
                 "type": "probe",
@@ -39,9 +33,6 @@
                         "service_url": "${service_url}",
                         "timeout": 1
                     }
-                },
-                "controls": {
-                    "tracing": {}
                 }
             }
         ]
@@ -54,9 +45,6 @@
                 "type": "process",
                 "path": "vegeta",
                 "arguments": "attack -targets=./experiments/scenario.txt -workers=8 -rate=25 -timeout=10s -duration=10s -output=result.bin"
-            },
-            "controls": {
-                "tracing": {}
             }
         }
     ]
